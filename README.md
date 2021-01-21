@@ -16,4 +16,22 @@ Client web: un logiciel en capacité d'envoyer  à un serveur web, des requêtes
 Serveur web: un logiciel en capacité de répondre à des requêtes HTTP. EN d'autres termes, il est capable de renvoyer des données (par exemple une page HTML ou du json), en réponse à des demandes écrites en HTTP (par exemple une requête GET ou POST).
 
 
+exercice2:
+Requete fetch testé sur navigateur:
+fetch('https://otakuotake.herokuapp.com/get2randomcharacters', { method: 'GET',
+                            headers: {},
+                            mode: 'cors',
+                            cache: 'default'}).then(
+                        function(response){
+                            response.json().then(
+                                function(data){ 
+                                    if (data.length>0){//si on a accès à des ventes de la commune dans l'url
+                                    console.log(data)
+                                    }
+                                    
+                                }
+                            )
+                        }
+                    );
+
 
